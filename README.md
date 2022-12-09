@@ -1,5 +1,5 @@
-# hu-bingwen.github.io
+# Bingwen Hu personal website
 
 Hellow world!
 
-Project name:
+Welcome to my website: [mechhu.com](http://www.mechhu.com)
