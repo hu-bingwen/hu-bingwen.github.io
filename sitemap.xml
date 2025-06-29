@@ -2,10 +2,34 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
+    <loc>https://bingwenhu.com/animals/</loc>
+    <lastmod>2023-04-01T00:00:00+02:00</lastmod>
+  </url><url>
+    <loc>https://bingwenhu.com/fashion-beauty/</loc>
+  </url><url>
+    <loc>https://bingwenhu.com/nature/</loc>
+  </url><url>
+    <loc>https://bingwenhu.com/categories/animals/</loc>
+    <lastmod>2023-04-01T00:00:00+02:00</lastmod>
+  </url><url>
+    <loc>https://bingwenhu.com/animals/cats/</loc>
+    <lastmod>2023-04-01T00:00:00+02:00</lastmod>
+  </url><url>
     <loc>https://bingwenhu.com/</loc>
+    <lastmod>2023-04-01T00:00:00+02:00</lastmod>
   </url><url>
-    <loc>https://bingwenhu.com/categories/</loc>
+    <loc>https://bingwenhu.com/categories/nature/</loc>
+    <lastmod>2023-04-01T00:00:00+02:00</lastmod>
   </url><url>
-    <loc>https://bingwenhu.com/tags/</loc>
+    <loc>https://bingwenhu.com/animals/dogs/</loc>
+    <lastmod>2023-01-12T00:00:00+01:00</lastmod>
+  </url><url>
+    <loc>https://bingwenhu.com/about/</loc>
+  </url><url>
+    <loc>https://bingwenhu.com/categories/beauty/</loc>
+  </url><url>
+    <loc>https://bingwenhu.com/categories/fashion/</loc>
+  </url><url>
+    <loc>https://bingwenhu.com/imprint/</loc>
   </url>
 </urlset>
