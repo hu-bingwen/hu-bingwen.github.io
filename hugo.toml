@@ -1,0 +1,7 @@
+baseURL = 'https://hu-bingwen.github.io'
+languageCode = 'en-us'
+title = 'Boundless'
+
+[module]
+  [[module.imports]]
+    path = "github.com/nicokaiser/hugo-theme-gallery/v4"
