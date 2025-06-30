@@ -2,34 +2,28 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
-    <loc>https://bingwenhu.com/animals/</loc>
-    <lastmod>2023-04-01T00:00:00+02:00</lastmod>
+    <loc>https://bingwenhu.com/city/</loc>
   </url><url>
-    <loc>https://bingwenhu.com/fashion-beauty/</loc>
+    <loc>https://bingwenhu.com/mexico/</loc>
   </url><url>
-    <loc>https://bingwenhu.com/nature/</loc>
+    <loc>https://bingwenhu.com/land/</loc>
   </url><url>
-    <loc>https://bingwenhu.com/categories/animals/</loc>
-    <lastmod>2023-04-01T00:00:00+02:00</lastmod>
-  </url><url>
-    <loc>https://bingwenhu.com/animals/cats/</loc>
-    <lastmod>2023-04-01T00:00:00+02:00</lastmod>
+    <loc>https://bingwenhu.com/mono/</loc>
   </url><url>
     <loc>https://bingwenhu.com/</loc>
-    <lastmod>2023-04-01T00:00:00+02:00</lastmod>
+    <lastmod>2025-06-29T00:00:00-07:00</lastmod>
   </url><url>
-    <loc>https://bingwenhu.com/categories/nature/</loc>
-    <lastmod>2023-04-01T00:00:00+02:00</lastmod>
-  </url><url>
-    <loc>https://bingwenhu.com/animals/dogs/</loc>
-    <lastmod>2023-01-12T00:00:00+01:00</lastmod>
+    <loc>https://bingwenhu.com/featured-album/</loc>
+    <lastmod>2025-06-29T00:00:00-07:00</lastmod>
   </url><url>
     <loc>https://bingwenhu.com/about/</loc>
   </url><url>
-    <loc>https://bingwenhu.com/categories/beauty/</loc>
+    <loc>https://bingwenhu.com/categories/city/</loc>
   </url><url>
-    <loc>https://bingwenhu.com/categories/fashion/</loc>
+    <loc>https://bingwenhu.com/categories/humanist/</loc>
   </url><url>
     <loc>https://bingwenhu.com/imprint/</loc>
+  </url><url>
+    <loc>https://bingwenhu.com/categories/nature/</loc>
   </url>
 </urlset>
