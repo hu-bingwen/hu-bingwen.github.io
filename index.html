@@ -4,6 +4,8 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Boundless Blog</title>
+  <link rel="icon" type="image/svg+xml" href="images/logo_compressed.png" />
+  <link rel="icon" type="image/png" href="images/logo_compressed.png" />
   <link rel="stylesheet" href="css/style.css" />
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;1,300;1,400&family=Mada:wght@300;400&display=swap" rel="stylesheet">
@@ -14,9 +16,21 @@
     <span class="theme-icon">☽</span>
   </button>
 
+  <!-- LIGHTBOX -->
+  <div class="lightbox" id="lightbox" role="dialog" aria-modal="true" aria-label="Image viewer">
+    <button class="lb-close" id="lbClose" aria-label="Close">✕</button>
+    <button class="lb-prev" id="lbPrev" aria-label="Previous">‹</button>
+    <button class="lb-next" id="lbNext" aria-label="Next">›</button>
+    <div class="lb-img-wrap">
+      <img class="lb-img" id="lbImg" src="" alt="" />
+    </div>
+    <div class="lb-caption" id="lbCaption"></div>
+    <div class="lb-counter" id="lbCounter"></div>
+  </div>
+
   <nav class="nav">
     <a href="index.html" class="nav-logo">
-      <img src="images/logo.svg" alt="Your Name logo" class="nav-logo-img"
+      <img src="./images/logo_compressed.png" alt="Boundless logo" class="nav-logo-img"
            onerror="this.style.display='none'; this.nextElementSibling.style.display='block'" />
       <span class="nav-logo-text" style="display:none">Boundless</span>
     </a>
@@ -43,106 +57,65 @@
   <!-- PHOTO + VIDEO GRID -->
   <main class="gallery-section">
     <div class="gallery-label">Selected Works</div>
-    <div class="gallery-grid">
+    <div class="gallery-grid" id="galleryGrid">
 
-      <!-- Regular photo -->
       <div class="grid-item span-2 fade-in" style="--delay:0.1s">
-        <div class="photo-wrap">
-          <img src="https://mechhucloud.oss-cn-hangzhou.aliyuncs.com/boundless/images/75F754D2-BDD1-428C-9F37-4C1C78328128_1_201_a_compressed.jpeg" alt="Boston ICA" onerror="this.parentNode.classList.add('placeholder')" />
-          <div class="photo-caption">Boston ICA Deck · May  2026</div>
+        <div class="photo-wrap viewable" data-caption="Boston ICA Deck · May 2026">
+          <img src="https://mechhucloud.oss-cn-hangzhou.aliyuncs.com/boundless/images/75F754D2-BDD1-428C-9F37-4C1C78328128_1_201_a_compressed.jpeg" 
+          alt="Boston ICA" 
+          data-ox="50%" data-oy="90%"
+          onerror="this.parentNode.classList.add('placeholder')" />
+            
+          <div class="photo-caption">Boston ICA Deck · May 2026</div>
         </div>
       </div>
 
-
-      <!-- Regular photo -->
       <div class="grid-item fade-in" style="--delay:0.3s">
-        <div class="photo-wrap">
-          <img src="https://mechhucloud.oss-cn-hangzhou.aliyuncs.com/boundless/images/8E64C38C-BF99-4459-813B-C95B0A86B41A_1_201_a_compressed.jpeg" alt="Still water" onerror="this.parentNode.classList.add('placeholder')" />
-          <div class="photo-caption">ICA Still Water · May  2026</div>
+        <div class="photo-wrap viewable" data-caption="ICA Still Water · May 2026">
+          <img src="images/8E64C38C-BF99-4459-813B-C95B0A86B41A_1_201_a_compressed.jpeg" alt="Still water" onerror="this.parentNode.classList.add('placeholder')" />
+          <div class="photo-caption">ICA Still Water · May 2026</div>
         </div>
       </div>
 
-      <!-- Regular photo -->
       <div class="grid-item span-2 fade-in" style="--delay:0.1s">
-        <div class="photo-wrap">
-          <img src="https://mechhucloud.oss-cn-hangzhou.aliyuncs.com/boundless/images/6A52DA08-85C0-4913-827A-67FDE0B90C77_1_201_a_compressed.jpeg" alt="Boston ICA" onerror="this.parentNode.classList.add('placeholder')" />
-          <div class="photo-caption">Boston ICA · May  2026</div>
-        </div>
-      </div>
-
-      <!-- Regular photo -->
-      <div class="grid-item fade-in" style="--delay:0.3s">
-        <div class="photo-wrap">
-          <img src="https://mechhucloud.oss-cn-hangzhou.aliyuncs.com/boundless/images/8406BA1A-0240-42DB-AC92-0C01CAE75B5E_compressed.jpeg" alt="Still water" onerror="this.parentNode.classList.add('placeholder')" />
-          <div class="photo-caption">Isabella Stewart Gardner Museum · May  2026</div>
-        </div>
-      </div>
-
-      <!-- Regular photo -->
-      <div class="grid-item fade-in" style="--delay:0.5s">
-        <div class="photo-wrap">
-          <img src="https://mechhucloud.oss-cn-hangzhou.aliyuncs.com/boundless/images/4AC814D2-9048-42F2-8B65-9557F8ADEAF8_compressed.jpeg" alt="Golden hour" onerror="this.parentNode.classList.add('placeholder')" />
-          <div class="photo-caption">Boston Downtown · May  2026</div>
-        </div>
-      </div>
-
-      <div class="grid-item fade-in" style="--delay:0.6s">
-        <div class="photo-wrap">
-          <img src="images/5CA20A51-FE10-42E6-A7DA-BD824717E351_compressed.jpeg" alt="Shadow play" onerror="this.parentNode.classList.add('placeholder')" />
-          <div class="photo-caption">Shadow Play · May  2026</div>
-        </div>
-      </div>
-      <div class="grid-item fade-in" style="--delay:0.3s">
-        <div class="photo-wrap">
-          <img src="images/31F3B75E-818C-4DE1-9FE8-EA6E1D92AFC3_compressed.jpeg" alt="Still water" onerror="this.parentNode.classList.add('placeholder')" />
-          <div class="photo-caption">7-11 · May  2026</div>
-        </div>
-      </div>
-
-
-       <!-- Regular photo -->
-      <!-- <div class="grid-item span-2 fade-in" style="--delay:0.1s">
-        <div class="photo-wrap">
+        <div class="photo-wrap viewable" data-caption="Boston ICA · May 2026">
           <img src="images/6A52DA08-85C0-4913-827A-67FDE0B90C77_1_201_a_compressed.jpeg" alt="Boston ICA" onerror="this.parentNode.classList.add('placeholder')" />
-          <div class="photo-caption">Boston ICA · May  2026</div>
+          <div class="photo-caption">Boston ICA · May 2026</div>
         </div>
-      </div> -->
+      </div>
 
-
-      <!-- VIDEO CARD -->
-      <!-- <div class="grid-item fade-in" style="--delay:0.4s">
-        <div class="photo-wrap video-card" data-video-url="https://vimeo.com/76979871">
-          <img src="images/photo4.jpg" alt="Urban geometry video" onerror="this.parentNode.classList.add('placeholder')" />
-          <div class="video-play-btn" aria-label="Watch video">
-            <svg viewBox="0 0 60 60" fill="none" xmlns="http://www.w3.org/2000/svg">
-              <circle cx="30" cy="30" r="29" stroke="white" stroke-opacity="0.8" stroke-width="1.5"/>
-              <polygon points="24,18 46,30 24,42" fill="white"/>
-            </svg>
-          </div>
-          <div class="video-badge">▶ Video</div>
-          <div class="photo-caption">Urban Geometry · 2023</div>
+      <div class="grid-item fade-in" style="--delay:0.3s">
+        <div class="photo-wrap viewable" data-caption="Isabella Stewart Gardner Museum · May 2026">
+          <img src="images/8406BA1A-0240-42DB-AC92-0C01CAE75B5E_compressed.jpeg" alt="Isabella Stewart Gardner Museum" data-ox="50%" data-oy="70%" onerror="this.parentNode.classList.add('placeholder')" />
+          <div class="photo-caption">Isabella Stewart Gardner Museum · May 2026</div>
         </div>
-      </div> -->
+      </div>
 
-      <!-- Regular photo -->
-      <!-- <div class="grid-item fade-in" style="--delay:0.5s">
-        <div class="photo-wrap">
-          <img src="images/photo5.jpg" alt="Golden hour" onerror="this.parentNode.classList.add('placeholder')" />
-          <div class="photo-caption">Golden Hour · 2023</div>
+      <div class="grid-item fade-in" style="--delay:0.5s">
+        <div class="photo-wrap viewable" data-caption="Boston Downtown · May 2026">
+          <img src="images/4AC814D2-9048-42F2-8B65-9557F8ADEAF8_compressed.jpeg" alt="Golden hour" onerror="this.parentNode.classList.add('placeholder')" />
+          <div class="photo-caption">Boston Downtown · May 2026</div>
         </div>
       </div>
 
       <div class="grid-item fade-in" style="--delay:0.6s">
-        <div class="photo-wrap">
-          <img src="images/photo6.jpg" alt="Shadow play" onerror="this.parentNode.classList.add('placeholder')" />
-          <div class="photo-caption">Shadow Play · 2023</div>
+        <div class="photo-wrap viewable" data-caption="Shadow Play · May 2026">
+          <img src="images/5CA20A51-FE10-42E6-A7DA-BD824717E351_compressed.jpeg" alt="Boston City Hall" data-ox="90%" data-oy="80%" onerror="this.parentNode.classList.add('placeholder')" />
+          <div class="photo-caption">Boston City Hall · May 2026</div>
         </div>
-      </div> -->
-      
-      <!-- VIDEO CARD — wide -->
+      </div>
+
+      <div class="grid-item fade-in" style="--delay:0.3s">
+        <div class="photo-wrap viewable" data-caption="7-11 · May 2026">
+          <img src="images/31F3B75E-818C-4DE1-9FE8-EA6E1D92AFC3_compressed.jpeg" alt="7-11" onerror="this.parentNode.classList.add('placeholder')" />
+          <div class="photo-caption">7-11 · May 2026</div>
+        </div>
+      </div>
+
+      <!-- VIDEO CARD — wide (not viewable in lightbox, opens link) -->
       <div class="grid-item span-2 fade-in" style="--delay:0.7s">
         <div class="photo-wrap video-card" data-video-url="https://www.bilibili.com/video/BV1yx2JYDEKV/">
-         <img src="images/461BED9C-9058-4647-BF51-9EA3BD900A5D_1_201_a_compressed.jpeg" alt="Alaska Glacier" onerror="this.parentNode.classList.add('placeholder')" />
+          <img src="https://mechhucloud.oss-cn-hangzhou.aliyuncs.com/boundless/images/461BED9C-9058-4647-BF51-9EA3BD900A5D_1_201_a_compressed.jpeg" alt="Alaska Glacier" data-ox="50%" data-oy="70%" onerror="this.parentNode.classList.add('placeholder')" />
           <div class="video-play-btn" aria-label="Watch video">
             <svg viewBox="0 0 60 60" fill="none" xmlns="http://www.w3.org/2000/svg">
               <circle cx="30" cy="30" r="29" stroke="white" stroke-opacity="0.8" stroke-width="1.5"/>
@@ -154,13 +127,12 @@
         </div>
       </div>
 
-
     </div>
   </main>
 
   <footer class="footer">
     <p>© <span id="yr"></span> Bingwen Hu</p>
-    <p><a href="mailto:you@email.com">hubingwen2019@email.com</a></p>
+    <p><a href="mailto:hubingwen2019@email.com">hubingwen2019@email.com</a></p>
   </footer>
 
   <script src="js/main.js"></script>

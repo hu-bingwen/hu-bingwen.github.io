@@ -3,7 +3,8 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>康波周期 · Kondratiev Wave — Boundless</title>
+  <!-- UPDATE: page title -->
+  <title>Post Title — Boundless</title>
   <link rel="icon" type="image/svg+xml" href="../images/logo_only_compressed.png" />
   <link rel="stylesheet" href="../css/style.css" />
   <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -33,13 +34,15 @@
     <div class="post-header fade-in" style="--delay:0.05s">
       <a href="../words.html" class="back-link">← All Writing</a>
       <div class="post-meta">
-        <span class="post-date">July 29 2021</span>
+        <!-- UPDATE: date and tag -->
+        <span class="post-date">Aug 1 2021</span>
         <span class="post-tag">Note</span>
       </div>
-      <h1 class="post-heading">康波周期<br><em>Kondratiev Wave</em></h1>
+      <!-- UPDATE: post title (em = italic accent) -->
+      <h1 class="post-heading">NFT<br><em> a fancy toy?</em></h1>
     </div>
 
-    <!-- Markdown renders here -->
+    <!-- Markdown content renders here automatically -->
     <div class="post-body fade-in md-body" id="mdBody" style="--delay:0.15s">
       <div class="md-loading">Loading…</div>
     </div>
@@ -51,12 +54,11 @@
     <p><a href="mailto:hubingwen2019@email.com">hubingwen2019@email.com</a></p>
   </footer>
 
-  <!-- marked.js: lightweight markdown parser, no build step needed -->
   <script src="https://cdn.jsdelivr.net/npm/marked@12/marked.min.js"></script>
   <script src="../js/main.js"></script>
   <script>
-    // Load the markdown file and render it into #mdBody
-    fetch('./md/kondratiev_wave.md')
+    // UPDATE: change filename to match your .md file in posts/md/
+    fetch('md/NFT_a_fancy_toy.md')
       .then(r => {
         if (!r.ok) throw new Error('Could not load markdown');
         return r.text();
