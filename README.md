@@ -1,4 +1,4 @@
-# Personal Photography Website
+# Personal Photography Website (OBSOLETE NEED UPDATES!!!!!!!!!)
 
 A clean, editorial personal site with three sections:
 - **Work** — photography grid (homepage)
