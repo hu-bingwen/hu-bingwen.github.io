@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Your Name — Words</title>
+  <link rel="stylesheet" href="css/style.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;1,300;1,400&family=Mada:wght@300;400&display=swap" rel="stylesheet">
+</head>
+<body>
+
+  <button class="theme-toggle" id="themeToggle" aria-label="Toggle light/dark mode">
+    <span class="theme-icon">☽</span>
+  </button>
+
+  <nav class="nav">
+    <a href="index.html" class="nav-logo">
+      <img src="images/logo.svg" alt="Your Name logo" class="nav-logo-img"
+           onerror="this.style.display='none'; this.nextElementSibling.style.display='block'" />
+      <span class="nav-logo-text" style="display:none">Boundless</span>
+    </a>
+    <ul class="nav-links">
+      <li><a href="index.html">Work</a></li>
+      <li><a href="words.html" class="active">Words</a></li>
+      <li><a href="about.html">About</a></li>
+    </ul>
+  </nav>
+
+  <header class="page-header">
+    <span class="hero-eyebrow">Word & Thoughts</span>
+    <h1>Decoding <br><em>World</em></h1>
+  </header>
+
+  <main class="words-section">
+    <div class="gallery-label">Essays &amp; Notes</div>
+    <div class="posts-list">
+
+      <article class="post-item fade-in" style="--delay:0.1s">
+        <a href="posts/post1.html" class="post-link">
+          <div class="post-meta">
+            <span class="post-date">May 2026</span>
+            <span class="post-tag">Note</span>
+          </div>
+          <h2 class="post-title">康波周期 (Kondratiev Wave)</h2>
+          <p class="post-excerpt">In economics, Kondratiev waves (also called supercycles, great surges, long waves, K-waves or the long economic cycle) are hypothesized cycle-like phenomena in the modern world economy. The phenomenon is closely connected with the technology life cycle.</p>
+          <span class="post-read">Read →</span>
+        </a>
+      </article>
+
+      
+
+    </div>
+  </main>
+
+  <footer class="footer">
+    <p>© <span id="yr"></span> Bingwen Hu</p>
+    <p><a href="mailto:you@email.com">hubingwen2019@email.com</a></p>
+  </footer>
+
+  <script src="js/main.js"></script>
+</body>
+</html>

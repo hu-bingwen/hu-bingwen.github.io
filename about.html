@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>About Me</title>
+  <link rel="stylesheet" href="css/style.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;1,300;1,400&family=Mada:wght@300;400&display=swap" rel="stylesheet">
+</head>
+<body>
+
+  <button class="theme-toggle" id="themeToggle" aria-label="Toggle light/dark mode">
+    <span class="theme-icon">☽</span>
+  </button>
+
+  <nav class="nav">
+    <a href="index.html" class="nav-logo">
+      <img src="images/logo.svg" alt="Your Name logo" class="nav-logo-img"
+           onerror="this.style.display='none'; this.nextElementSibling.style.display='block'" />
+      <span class="nav-logo-text" style="display:none">Boundless</span>
+    </a>
+    <ul class="nav-links">
+      <li><a href="index.html">Work</a></li>
+      <li><a href="words.html">Words</a></li>
+      <li><a href="about.html" class="active">About</a></li>
+    </ul>
+  </nav>
+
+  <main class="about-section">
+
+    <div class="about-portrait fade-in" style="--delay:0.05s">
+      <div class="portrait-wrap">
+        <img src="images/portrait_compressed.jpg" alt="Portrait" onerror="this.parentNode.classList.add('placeholder')" />
+      </div>
+    </div>
+
+    <div class="about-body">
+
+      <div class="fade-in" style="--delay:0.15s">
+        <span class="hero-eyebrow">About</span>
+        <h1 class="about-name">Bingwen (Andrew) Hu</h1>
+      </div>
+
+      <div class="about-text fade-in" style="--delay:0.25s">
+        <p>Welcome to this place, it is my portfolio and blogs. I earned my Master’s degree in Mechanical Engineering at University of Washington (Seattle), and worked in Prof.Jonathan T.C. Liu's lab.
+        <p>Currently I am working on µLED Display for AR glasses at <strong>Google Raxium</strong>. 
+      </div>
+
+      <div class="about-details fade-in" style="--delay:0.35s">
+        <div class="detail-col">
+          <h3>Currently</h3>
+          <ul>
+            <li>Working on µLED Display for AR glasses</li>
+            <li><a href="https://opg.optica.org/boe/fulltext.cfm?uri=boe-14-11-6048">Miniature line-scanned dual-axis confocal microscope for versatile clinical use</a></li>
+          </ul>
+        </div>
+        <div class="detail-col">
+          <h3>Elsewhere</h3>
+          <ul>
+            <li><a href="https://github.com/hu-bingwen/" target="_blank" rel="noopener">Github</a></li>
+            <li><a href="https://www.youtube.com/@boundless_hu" target="_blank" rel="noopener">YouTube</a></li>
+            <li><a href="https://space.bilibili.com/8293269" target="_blank" rel="noopener">Bilibili</a></li>
+            <li><a href="mailto:hubingwen2019@email.com">hubingwen2019@email.com</a></li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="about-quote fade-in" style="--delay:0.45s">
+        <blockquote>
+          "生活注定从低音区开始，从平静中突围，背弃喧嚣的人"
+          <cite>— 芦苇岸</cite>
+        </blockquote>
+      </div>
+
+    </div>
+  </main>
+
+  <footer class="footer">
+    <p>© <span id="yr"></span> Bingwen Hu </p>
+    <p><a href="mailto:you@email.com">hubingwen2019@email.com</a></p>
+  </footer>
+
+  <script src="js/main.js"></script>
+</body>
+</html>
