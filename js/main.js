@@ -25,6 +25,7 @@ document.addEventListener('DOMContentLoaded', () => {
   updateIcon(saved);
 
   document.addEventListener('DOMContentLoaded', () => {
+    document.body.classList.add('theme-ready'); // ← add this
     const btn = document.getElementById('themeToggle');
     if (!btn) return;
     updateIcon(html.getAttribute('data-theme'));

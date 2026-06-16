@@ -51,6 +51,9 @@ body {
   line-height: 1.75;
   min-height: 100vh;
   -webkit-font-smoothing: antialiased;
+}
+
+body.theme-ready {
   transition: background .35s var(--ease), color .35s var(--ease);
 }
 
