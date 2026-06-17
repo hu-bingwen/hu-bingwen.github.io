@@ -2,6 +2,7 @@
    THEME TOKENS  (dark = default)
 ───────────────────────────────────────── */
 :root {
+  color-scheme: dark;
   --bg:        #0e0d0b;
   --surface:   #161512;
   --border:    #2a2720;
@@ -21,6 +22,7 @@
 
 /* ── LIGHT MODE ─────────────────────────── */
 [data-theme="light"] {
+  color-scheme: light;
   --bg:        #f5f2ec;
   --surface:   #ede9e0;
   --border:    #d4cfc5;
