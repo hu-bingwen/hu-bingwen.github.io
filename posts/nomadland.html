@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <!-- UPDATE: page title -->
+  <title>Post Title — Boundless</title>
+  <link rel="icon" type="image/svg+xml" href="../images/logo_only_compressed.png" />
+  <link rel="stylesheet" href="../css/style.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;1,300;1,400&family=Mada:wght@300;400&display=swap" rel="stylesheet">
+</head>
+<body>
+
+  <button class="theme-toggle" id="themeToggle" aria-label="Toggle light/dark mode">
+    <span class="theme-icon">☽</span>
+  </button>
+
+  <nav class="nav">
+    <a href="../index.html" class="nav-logo">
+      <img src="../images/logo_compressed.png" alt="Boundless logo" class="nav-logo-img"
+           onerror="this.style.display='none'; this.nextElementSibling.style.display='block'" />
+      <span class="nav-logo-text" style="display:none">Boundless</span>
+    </a>
+    <ul class="nav-links">
+      <li><a href="../index.html">Work</a></li>
+      <li><a href="../words.html" class="active">Words</a></li>
+      <li><a href="../about.html">About</a></li>
+    </ul>
+  </nav>
+
+  <main class="post-section">
+
+    <div class="post-header fade-in" style="--delay:0.05s">
+      <a href="../words.html" class="back-link">← All Writing</a>
+      <div class="post-meta">
+        <!-- UPDATE: date and tag -->
+        <span class="post-date">July 13 2026</span>
+        <span class="post-tag">Note</span>
+      </div>
+      <!-- UPDATE: post title (em = italic accent) -->
+      <h1 class="post-heading">NomadLand<br><em>游牧民族和无依之地</em></h1>
+    </div>
+
+    <!-- Markdown content renders here automatically -->
+    <div class="post-body fade-in md-body" id="mdBody" style="--delay:0.15s">
+      <div class="md-loading">Loading…</div>
+    </div>
+
+  </main>
+
+  <footer class="footer">
+    <p>© <span id="yr"></span> Bingwen Hu</p>
+    <p><a href="mailto:hubingwen2019@email.com">hubingwen2019@email.com</a></p>
+  </footer>
+
+  <script src="https://cdn.jsdelivr.net/npm/marked@12/marked.min.js"></script>
+  <script src="../js/main.js"></script>
+  <script>
+    // UPDATE: change filename to match your .md file in posts/md/
+    fetch('md/nomadland.md')
+      .then(r => {
+        if (!r.ok) throw new Error('Could not load markdown');
+        return r.text();
+      })
+      .then(text => {
+        document.getElementById('mdBody').innerHTML = marked.parse(text);
+      })
+      .catch(() => {
+        document.getElementById('mdBody').innerHTML =
+          '<p style="color:var(--muted);font-style:italic">Content could not be loaded.</p>';
+      });
+  </script>
+</body>
+</html>
